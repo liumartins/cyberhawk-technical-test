@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TurbineController;
+use App\Http\Controllers\ComponentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +18,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/greeting', function () {
+    return 'Hello World';
+});
+
+//Turbines
+Route::get('/turbine/show', [TurbineController::class, 'show']);
+
+
+//Components
+Route::get('/components/show', [ComponentController::class, 'show']);
