@@ -1,5 +1,7 @@
-<h1><?=$title?></h1>
+@extends('layouts.master')
 
+@section('content')
+<h1><?=$title?></h1>
 <?php foreach ($turbines as $turbine): ?>
     <h2><?=$turbine->name;?></h2>
     <h3>{{ _('Components') }}:</h3>
@@ -21,3 +23,4 @@
     </table>
     <?php endforeach; ?>
 <?php endforeach; ?>
+@endsection
